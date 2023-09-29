@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hangmanup:
+    image: hangmanup
+    build:
+      context: .
+      dockerfile: ./Dockerfile

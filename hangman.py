@@ -96,12 +96,4 @@ def start_hangman_game():
 
 print("===== Welcome to Hangman Game =====")
 while 1:
-    choice = input("Do you wanna play hangman (y/n): ")
-    if 'y' in choice.lower():
-        start_hangman_game()
-    elif 'n' in choice.lower():
-        print('Exiting...')
-        break
-    else:
-        print("Invalid input...please try again")
-    print("\n")
+ start_hangman_game()

@@ -1,11 +1,9 @@
-FROM ubuntu:22.04
-FROM python:3.11
+FROM python:3.10-slim
 
-RUN apt update && apt install -y python3 python3-pip
+COPY requirements.txt .
+RUN python -m pip install -r requirements.txt
 
-WORKDIR /usr/src/app
+WORKDIR /app
+COPY . /app
 
-COPY hangman*.py ./
-COPY . .
-
-CMD [ "python", "hangman.py" ]
+CMD ["python", "hangman.py"]
