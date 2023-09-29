@@ -1,7 +1,7 @@
 FROM python:alpine
 
-WORKDIR /app
-
+WORKDIR /usr/src/app
+COPY hangman*.py ./
 COPY . .
 
 CMD [ "python", "hangman.py" ]
